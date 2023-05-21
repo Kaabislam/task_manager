@@ -36,7 +36,7 @@ class _loginScreenState extends State<loginScreen> {
       if(response == true){
         Loading = false;
 
-        Navigator.pushNamedAndRemoveUntil(context, "/newTaskList", (route) => false);
+        Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
       }
       else{
         setState(() {
