@@ -3,6 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:task_manager/style/style.dart';
+import 'package:task_manager/utility/utitlity.dart';
+
+import '../../api/apiClient.dart';
 
 class pinVerificationScreen extends StatefulWidget {
   const pinVerificationScreen({Key? key}) : super(key: key);
@@ -12,6 +15,39 @@ class pinVerificationScreen extends StatefulWidget {
 }
 
 class _pinVerificationScreenState extends State<pinVerificationScreen> {
+  Map<String,String> Formvalues = {"otp":""};
+  var Loading = false;
+  InputOnChange(mapKey,textValue){
+    setState(() {
+      Formvalues.update(mapKey, (value) => textValue);
+      // print(Formvalues);
+    });
+  }
+  FormValidity() async {
+    if (Formvalues["otp"]!.length != 6) {
+      ErrorToast("Pin Required !");
+    }
+    else{
+      setState(() {
+        Loading = true;
+      });
+      String? emailAddress = await ReadUserData("EmailVerification");
+      bool response = await VerifyOTPRequest(emailAddress,Formvalues["otp"]);
+
+      if(response == true){
+        Loading = false;
+
+        Navigator.pushNamedAndRemoveUntil(context, "/setPassword", (route) => false);
+      }
+      else{
+        setState(() {
+          Loading = false;
+        });
+      }
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,13 +69,17 @@ class _pinVerificationScreenState extends State<pinVerificationScreen> {
                     pinTheme: AppOTPStyle(),
                     length: 6,
                     appContext: context,
-                    onChanged: (String value) {  },
+                    onChanged: (value) {
+                      InputOnChange("otp", value);
+                    },
                     onCompleted: (onComplete){},
 
 
                 ),
                 Container(
-                  child:ElevatedButton(onPressed: (){}, child: SuccessButtonChild("Verify"),style: AppButtonStyle(),),
+                  child:ElevatedButton(onPressed: (){
+                    FormValidity();
+                  }, child: SuccessButtonChild("Verify"),style: AppButtonStyle(),),
                 ),
               ],
             ),

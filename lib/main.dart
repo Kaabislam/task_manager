@@ -6,13 +6,24 @@ import 'package:task_manager/screen/onboarding/registrationScreen.dart';
 import 'package:task_manager/screen/onboarding/setPasswordScreen.dart';
 import 'package:task_manager/screen/onboarding/splashScreen.dart';
 import 'package:task_manager/screen/task/newTaskListScreen.dart';
+import 'package:task_manager/utility/utitlity.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  String? token = await ReadUserData('token');
+  if(token == null){
+    runApp(MyApp('/login'));
+
+  }
+  else{
+    runApp(MyApp('/newTaskList'));
+
+  }
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  String currentWindow;
+  MyApp(this.currentWindow);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

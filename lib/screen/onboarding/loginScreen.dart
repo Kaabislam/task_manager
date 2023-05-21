@@ -82,7 +82,26 @@ class _loginScreenState extends State<loginScreen> {
                         child: SuccessButtonChild("Login"),style: AppButtonStyle(),),
                     ),
 
+                    SizedBox(height: 50,),
+                    InkWell(
+                      onTap: (){Navigator.pushNamed(context, '/emailVerification');},
+                      child: Text("Foget Password ?",style: Head7Text(colorLightGray),),
+                    ),
+                    SizedBox(height: 10,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          onTap: (){},
+                          child: Text("Don't have an Account ? ",style: Head7Text(colorLightGray),),
+                        ),
+                        InkWell(
+                          onTap: (){Navigator.pushNamed(context, "/registration");},
+                          child: Text("Sign Up ",style: Head7Text(colorGreen),),
+                        ),
 
+                      ],
+                    )
 
                   ],
                 ),
