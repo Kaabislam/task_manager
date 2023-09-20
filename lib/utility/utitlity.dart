@@ -28,3 +28,9 @@ Future<void> WriteOTPVerification(OTP) async {
   final prefs = await SharedPreferences.getInstance();
   await prefs.setString('OTPVerification', OTP);
 }
+
+Future<bool> RemoveToken() async{
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.remove('token');
+  return true;
+}

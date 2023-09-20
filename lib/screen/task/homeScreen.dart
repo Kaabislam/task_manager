@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_manager/component/TaskAppBar.dart';
 import 'package:task_manager/component/appBottomNav.dart';
 import 'package:task_manager/component/cancelTaskList.dart';
 import 'package:task_manager/component/completedTaskList.dart';
@@ -30,7 +31,7 @@ class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: TaskAppBar(context),
       body: widegetOptions.elementAt(TabIndex),
       bottomNavigationBar: appBottomNav(TabIndex,onItemTapped),
     );
