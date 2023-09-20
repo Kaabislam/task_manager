@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:task_manager/component/TaskList.dart';
 
 import '../api/apiClient.dart';
+
 
 class newTaskList extends StatefulWidget{
   const newTaskList({Key? key}):super(key:key);
@@ -29,8 +32,10 @@ class _newTaskListState extends State<newTaskList> {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Text("new task list"),
-    );
+    return Loading?(Center(child: CircularProgressIndicator(),))
+        :
+    RefreshIndicator(child: TaskList(TaskItems), onRefresh: () async{
+      await CallData();
+    });
   }
 }

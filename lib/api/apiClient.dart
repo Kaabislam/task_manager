@@ -103,7 +103,7 @@ Future<List> TaskListRequest(Status) async {
   var response=await http.get(URL,headers: RequestHeaderWithToken);
   var ResultCode=response.statusCode;
   var ResultBody=json.decode(response.body);
-  if(ResultCode==200 && ResultBody['status']){
+  if(ResultCode==200 && ResultBody['status'] == "success"){
     SuccessToast("Request Success");
     return ResultBody['data'];
   }

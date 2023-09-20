@@ -2,8 +2,11 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:task_manager/component/TaskList.dart';
 
 import '../api/apiClient.dart';
+
 class completedTaskList extends StatefulWidget{
   const completedTaskList({Key? key}):super(key:key);
   @override
@@ -31,8 +34,10 @@ class _completedTaskListState extends State<completedTaskList> {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Text("completed task list"),
-    );
+    return Loading?(Center(child: CircularProgressIndicator(),))
+        :
+    RefreshIndicator( onRefresh: () async{
+      await CallData();
+    },child: TaskList(TaskItems),);
   }
 }

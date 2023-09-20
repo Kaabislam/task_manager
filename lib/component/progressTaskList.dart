@@ -1,5 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:task_manager/component/TaskList.dart';
 
 import '../api/apiClient.dart';
 
@@ -30,8 +32,11 @@ class _progressTaskListState extends State<progressTaskList> {
   }
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: Text("progress task list"),
-    );
+    return Loading?(Center(child: CircularProgressIndicator(),))
+        :
+    RefreshIndicator(child: TaskList(TaskItems), onRefresh: () async{
+      await CallData();
+    });
+
   }
 }
