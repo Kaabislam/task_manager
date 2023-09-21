@@ -8,7 +8,7 @@ AppBar TaskAppBar(context){
     actions: [
       IconButton(
           onPressed: () {
-
+            Navigator.pushNamed(context, '/createTask');
           },
           icon: Icon(Icons.add_circle_outline)),
 
