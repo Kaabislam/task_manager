@@ -195,3 +195,15 @@ void ErrorToast(msg){
       fontSize: 16.0
   );
 }
+
+void SimpleToast(msg){
+  Fluttertoast.showToast(
+      msg: msg,
+      gravity: ToastGravity.BOTTOM,
+      timeInSecForIosWeb: 1,
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: colorRed,
+      textColor: colorWhite,
+      fontSize: 16.0
+  );
+}
