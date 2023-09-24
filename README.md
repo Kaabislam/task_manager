@@ -5,4 +5,11 @@ password,pin verification , list all the tasks into New,Progressed and completed
 updates them and some other functionality.
 
 ## Login,Sign Up,Forget password,Pin Verifcation Screen
-![382657089_1511468289589380_345518269146361038_n] (https://github.com/Kaabislam/task_manager/assets/42168364/c9626955-e23e-460c-9263-3eb284eac58f) ![383176572_853790436395507_6080690683940416177_n](https://github.com/Kaabislam/task_manager/assets/42168364/4dc92e82-5d84-4d81-94ab-8e52f67deb63)![381457254_3453324648212574_330940109626340624_n](https://github.com/Kaabislam/task_manager/assets/42168364/bc3ba8f8-80a3-45a0-9376-646071b7d291)
+| Login Screen   | Sign Up Screen                           |  Forget Password Screen     |
+| ----------------------------------- | ----------------------------------- | ----------------------------------- |
+| ![382657089_1511468289589380_345518269146361038_n](https://github.com/Kaabislam/task_manager/assets/42168364/8a891263-4188-4848-99fc-6f72685a00f5) | ![383176572_853790436395507_6080690683940416177_n](https://github.com/Kaabislam/task_manager/assets/42168364/6033c863-6a4e-4dff-bce8-8511c2756fd2) | ![381457254_3453324648212574_330940109626340624_n](https://github.com/Kaabislam/task_manager/assets/42168364/9d4f9b81-ea10-4c50-a3b4-2e51b3bed458) |
+
+
+![379657627_817850710078588_7393511428797670991_n](https://github.com/Kaabislam/task_manager/assets/42168364/a115e55e-34b6-4608-a5a4-192202fc4bed)
+![379663627_284959501059283_4211255575362996906_n (1)](https://github.com/Kaabislam/task_manager/assets/42168364/909b684f-8a7d-4c13-95a0-04b75c200dba)
+![379663627_284959501059283_4211255575362996906_n](https://github.com/Kaabislam/task_manager/assets/42168364/5db7163f-b5b0-4416-b091-2164c7f68772)
