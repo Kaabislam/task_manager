@@ -1,16 +1,4 @@
-# task_manager
+# Task_Manager_Project_With_Flutter
 
-flutter project with rest api and advanced features
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A task Manager Project with three (3) different types of tasks.App has login,signup,forget password,pin verification , list all the tasks
+into New,Progressed and completed lists and updates them and some other functionality.
