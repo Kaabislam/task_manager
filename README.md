@@ -1,6 +1,6 @@
 # Task_Manager_Project_With_Flutter
 
-A task Manager Project with three (3) different types of tasks . App has login,signup,forget 
+A task Manager Project with Four (4) different types of tasks . App has login,signup,forget 
 password,pin verification and list all the tasks into New,Progressed,completed lists.Also 
 user can update the list,delete a task from the list and logouts. 
 
